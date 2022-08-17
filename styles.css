@@ -37,6 +37,7 @@ nav li a:hover {
   background-color: white;
   color: rgba(255, 0, 0, 0.765);
   border-radius: 100px;
+  padding: 4px;
   transition: all .3s ease-in-out;
 }
 
@@ -171,8 +172,13 @@ img {
 
 
 @media screen and (max-width: 576px) {
-    nav ul {
-    width: 70%;
+  nav {
+    position: relative;
+    height: 190px;
+  }
+
+  nav ul {
+    flex-direction: column;
   }
   
   .surabaya {
