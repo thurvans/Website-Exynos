@@ -171,14 +171,19 @@ img {
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
+  body {
+    background-color: white;
+  }
   nav {
     position: relative;
     height: 190px;
+    background-color: black;
   }
 
   nav ul {
     flex-direction: column;
+    width: 200px;
   }
   
   .surabaya {
