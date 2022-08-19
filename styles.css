@@ -77,6 +77,11 @@ img {
   width:200px;
   height: 100px;
 }
+/*  Sejarah */
+.sejarah > h2 {
+  color: black;
+  text-shadow: white 2px;
+}
 
 .surabaya {
   text-align: justify;
