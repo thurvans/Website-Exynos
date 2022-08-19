@@ -14,5 +14,3 @@ Masih newbie jadi bingung mau konteksnya gimana
 | **Animasi Digunakan** | : |  |
 | **Font Digunakan** | : | [Dr Sugiyama, Playfair](https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Playfair+Display:wght@600&display=swap) |
 | **Referensi** | : | Google |
-
-*Note: Nama Author harus di cantum di salah satu di file project, untuk mendapatkan userId discord bisa ke #main-cmd dan ketik `/userinfo <NamaDiscordAnda>`
