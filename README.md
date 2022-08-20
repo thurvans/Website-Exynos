@@ -14,3 +14,5 @@ Masih newbie jadi bingung mau konteksnya gimana
 | **Animasi Digunakan** | : |  |
 | **Font Digunakan** | : | [Dr Sugiyama, Playfair](https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Playfair+Display:wght@600&display=swap) |
 | **Referensi** | : | Google |
+| **Sumber** | : | (https://id.wikipedia.org)
+|            | : | (https://direktoratk2krs.kemsos.go.id/pahlawannasional)

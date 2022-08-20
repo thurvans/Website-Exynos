@@ -1,12 +1,19 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Design */
 body {
     background: grey;
-    padding: 20px;
     font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 1rem;
   }
 
 nav {
@@ -36,7 +43,7 @@ nav ul li a {
 nav li a:hover {
   background-color: white;
   color: rgba(255, 0, 0, 0.765);
-  border-radius: 100px;
+  border-radius: 8px;
   padding: 4px;
   transition: all .3s ease-in-out;
 }
@@ -50,18 +57,49 @@ nav .garuda img {
   height: 60px;
 }
 
-.content {
-  text-align: center;
-  background-color: rgb(125, 121, 121);
-  border: solid black 2px;
+.divider {
+  margin: 4px;
+  width: 100%;
+  height: 4px;
+  background: #eaeaea;
 }
 
-.content:hover {
-  text-align: center;
-  background-color: rgb(205, 72, 72);
-  color: white;
-  border: solid black 2px;
-  transition: all .3s ease-in-out;
+.wrapper {
+  color: #222;
+  background-color: #eaeaea;
+  box-shadow: 6px 6px 3px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 3px 3px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.wrapper>h3 {
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+.wrapper>p {
+  font-size: 1.5em;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+blockquote {
+  font-family: 'Fira Sans', 'sans-serif';
+  margin-bottom: 10px;
+}
+
+.detail {
+  margin-top: 14px;
+  padding-left: 20px;
+  letter-spacing: 1.5px;
+  word-wrap: break-word;
+  word-spacing: normal;
 }
 
 h2,
@@ -71,59 +109,41 @@ h3 {
   margin-bottom: .5em;
 }
 
-img {
-  float: left;
-  padding: 0 8px 4px 0;
-  width:200px;
-  height: 100px;
-}
-/*  Sejarah */
-.sejarah > h2 {
-  color: black;
-  text-shadow: white 2px;
+/* Sejarah */
+.recent-work {
+  display: flex;
+  padding: 30px;
+  background-color: black;
 }
 
-.surabaya {
-  text-align: justify;
-  width: 98%;
-  border: solid black 1px;
-  padding: 8px;
+.recent-work .pic {
+  flex-shrink: 0;
+  flex-basis: 40%
 }
 
-
-.ambarawa {
-  text-align: justify;
-  width: 98%;
-  height: 150px ;
-  border: solid black 1px;
-  padding: 8px;
+.pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-.medan {
-  text-align: justify;
-  width: 98%;
-  height: 285px;
-  border: solid black 1px;
-  padding: 8px;
+.recent-work p {
+  color: white;
+  display: inline;
 }
 
-.bandung {
-  text-align: justify;
-  width: 98%;
-  height: 279px;
-  border: solid black 1px;
-  padding: 8px;
+.desc {
+  margin-left: 40px;
 }
 
-.margarana {
-  text-align: justify;
-  width: 98%;
-  height: 290px;
-  border: solid black 1px;
-  padding: 8px;
+.recent-work h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  color: white;
 }
 
+/* proklamasi */
 .audio {
   display: none;
 }
@@ -170,72 +190,85 @@ img {
   transform: rotate(1.4deg);
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1em;
+/* Foto Pahlawan */
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-/* hover styles */
-.location-listing {
-  position: relative;
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
-.location-image {
-  line-height: 0;
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
-.location-image img {
-  width: 100%;
-  height: auto;
-  filter: blur(0px);
-  transition: filter 0.3s ease-in;
-  transform: scale(1.1);
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
 }
 
-.location-title {
-  font-size: 1.5em;
-  font-weight: bold;
+.main a {
   text-decoration: none;
-  z-index: 1;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity .5s;
-  background: rgba(90,0,10,0.4);
-  color: white;
-  
-  /* position the text in t’ middle*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.location-listing:hover .location-title {
-  opacity: 1;
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
 }
 
-.location-listing:hover .location-image img {
-  filter: blur(2px);
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
 }
 
-
-/* for touch screen devices */
-@media (hover: none) { 
-  .location-title {
-    opacity: 1;
-  }
-  .location-image img {
-    filter: blur(2px);
-  }
-}
-
-
+/* Responsive */
 @media only screen and (max-width: 720px) {
   body {
     background-color: white;
@@ -249,31 +282,6 @@ img {
   nav ul {
     flex-direction: column;
     width: 200px;
-  }
-  
-  .surabaya {
-    width: 108%;
-    height: 435px;
-  }
-  
-  .ambarawa {
-    width: 108%;
-    height: 340px;
-  }
-
-  .medan {
-    width: 108%;
-    height: 750px;
-  }
-
-  .bandung {
-    width: 108%;
-    height: 750px;
-  }
-
-  .margarana {
-    width: 108%;
-    height: 799px;
   }
 }
 
@@ -291,30 +299,26 @@ img {
     flex-direction: column;
     width: 200px;
   }
-  
-  .surabaya {
-    width: 108%;
-    height: 435px;
-  }
-  
-  .ambarawa {
-    width: 108%;
-    height: 340px;
-  }
+}
 
-  .medan {
-    width: 108%;
-    height: 750px;
+@media (max-width: 900px) {
+  .recent-work {
+    flex-direction: column;
   }
-
-  .bandung {
-    width: 108%;
-    height: 750px;
+  .desc {
+    margin-left: 0;
   }
+}
 
-  .margarana {
-    width: 108%;
-    height: 799px;
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
   }
 }
 
